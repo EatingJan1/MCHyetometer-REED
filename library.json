@@ -9,11 +9,5 @@
       "url": "https://github.com/EatingJan1/MCHyetometer-REED.git"
     },
     "frameworks": "arduino",
-    "platforms":
-    [
-      "atmelavr",
-      "espressif8266",
-      "espressif32",
-      "https://github.com/pioarduino/platform-espressif32/releases/download/stable/platform-espressif32.zip"
-    ]
+    "platforms": "*"
   }
