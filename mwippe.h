@@ -27,9 +27,6 @@ private:
         unsigned int Pin2;
         
     }pinout;
-    
-    bool S1;
-    bool S2;
 
     struct
     {
