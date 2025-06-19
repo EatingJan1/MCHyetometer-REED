@@ -63,17 +63,19 @@ void mwippe::addWater()
 };
 
 
-void mwippe::checkonesensor()
+bool mwippe::checkonesensor()
 {
     
     if(this->pinstate.Pin1!=digitalRead(this->pinout.Pin1))
     {
         this->addWater();
         this->readpinstate();
+        return true;
     }
+    return false;
 
 };
-void mwippe::checktwosensor()
+bool mwippe::checktwosensor()
 {
     //Serial.println(this->pinstate.Pin1);
     //Serial.println(this->pinstate.Pin2);
@@ -82,19 +84,22 @@ void mwippe::checktwosensor()
     {
         this->addWater();
         this->readpinstate();
+        return true;
     }
+    return false;
 };
 
 
-void mwippe::runcheckerwipp()
+bool mwippe::runcheckerwipp()
 {
     if(this->pinout.Pin2 == NULL)
     {
-        this->checkonesensor();
+        return this->checkonesensor();
     }
     else
     {
-        this->checktwosensor();
+        return this->checktwosensor();
     }
+    return 0;
 
 };

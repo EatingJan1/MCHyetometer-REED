@@ -8,7 +8,7 @@ class mwippe
 public:
     mwippe(unsigned int Pin, float rainunit);
     mwippe(unsigned int Pin1, unsigned int Pin2, float rainunit);
-    void runcheckerwipp();
+    bool runcheckerwipp();
     float getDayrain();
     void setDayrain(float raintoday);
     float getRainunit();
@@ -34,8 +34,8 @@ private:
         bool Pin2;
     }pinstate;
 
-    void checkonesensor();
-    void checktwosensor();
+    bool checkonesensor();
+    bool checktwosensor();
     void addWater();
     
 };
